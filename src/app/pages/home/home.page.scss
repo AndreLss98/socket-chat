@@ -1,1 +1,11 @@
+#header {
+    color: white;
+    padding: 2.5vh 0;
+    ion-icon {
+        font-size: 1.3em;
+    }
+}
 
+ion-header::after {
+    display: none;
+}
