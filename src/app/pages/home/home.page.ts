@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MainNavigateService } from 'src/app/services/navigator/main-navigate.service';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,12 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private navigateService: MainNavigateService) {
+
+  }
+
+  public visualizeChat() {
+    this.navigateService.goToChatPage()
+  }
 
 }
