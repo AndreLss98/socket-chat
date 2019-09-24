@@ -7,13 +7,13 @@
       <ion-col>
         <ion-item>
           <ion-label position="floating">Nick name</ion-label>
-          <ion-input></ion-input>
+          <ion-input #name></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col text-center>
-        <ion-button mode="md" shape="round">Entrar</ion-button>
+      <ion-col class="ion-text-center">
+        <ion-button (click)="toHome()" mode="md" shape="round" [disabled]="!name.value">Entrar</ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>
