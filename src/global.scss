@@ -29,8 +29,16 @@ ion-header {
     background-color: #1F1F1F;
 }
 
+ion-header::after {
+    display: none;
+}
+
 ion-content {
     --ion-background-color: linear-gradient(#1F1F1F, #030303);
+}
+
+ion-footer {
+    background-color: #030303;
 }
 
 ion-label {

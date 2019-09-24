@@ -1,0 +1,12 @@
+ion-footer ion-icon {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+}
+
+ion-footer ion-grid ion-row ion-col textarea {
+    width: 100%;
+    border-radius: 10px;
+    resize: none;
+    padding: 5px 10px;
+}
