@@ -1,3 +1,22 @@
-<p>
-  conversation-item works!
-</p>
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-icon src="./../../../assets/avatarMan.svg"></ion-icon>
+    </ion-col>
+    <ion-col>
+      <ion-row>
+        <ion-col>
+          <div>{{ name }}</div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div>{{ lastMessage }}</div>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+    <ion-col>
+      <div>{{ date }}</div>
+    </ion-col>
+  </ion-row>
+</ion-grid>

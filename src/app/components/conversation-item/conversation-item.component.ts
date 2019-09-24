@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-conversation-item',
@@ -7,8 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConversationItemComponent implements OnInit {
 
-  constructor() { }
+  @Input() name: string;
+  @Input() lastMessage: string;
+  @Input() date;
 
-  ngOnInit() {}
+  constructor() {
+
+  }
+
+  ngOnInit() {
+
+  }
+
+
 
 }
