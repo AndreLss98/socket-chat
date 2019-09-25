@@ -7,13 +7,13 @@
       <ion-col>
         <ion-item>
           <ion-label position="floating">Nick name</ion-label>
-          <ion-input #name></ion-input>
+          <ion-input [(ngModel)]="nickName"></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col class="ion-text-center">
-        <ion-button (click)="toHome()" mode="md" shape="round" [disabled]="!name.value">Entrar</ion-button>
+        <ion-button (click)="toHome()" mode="md" shape="round" [disabled]="!nickName">Entrar</ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>

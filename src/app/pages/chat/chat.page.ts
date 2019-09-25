@@ -14,6 +14,7 @@ export class ChatPage implements OnInit {
 
   public message = '';
   public messages: ChatObject[] = [];
+  public currentUser;
 
   constructor(private chatService: ChatService, private settingsService: GlobalConfgService) {
 
@@ -21,6 +22,7 @@ export class ChatPage implements OnInit {
 
   ngOnInit() {
     this.fetchMessages();
+    this.currentUser = this.settingsService.getUserName();
   }
 
   public fetchMessages() {

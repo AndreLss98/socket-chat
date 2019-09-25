@@ -10,3 +10,28 @@ ion-footer ion-grid ion-row ion-col textarea {
     resize: none;
     padding: 5px 10px;
 }
+
+ion-footer ion-grid ion-row ion-col ion-button {
+    --background: linear-gradient( 135deg, #870000 30%, #190A05);
+}
+
+ion-content ion-grid ion-row ion-col {
+    color: white;
+    padding: 5px 0;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+ion-content ion-grid ion-row ion-col.userMessage {
+    background-image: linear-gradient( -45deg, #870000 30%, #190A05);
+    border-bottom-right-radius: 0;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+ion-content ion-grid ion-row ion-col.otherMessage {
+    background-image: linear-gradient( -45deg, #232526 30%, #414345);
+    border-bottom-left-radius: 0;
+    padding-left: 5px;
+    padding-right: 10px;
+}

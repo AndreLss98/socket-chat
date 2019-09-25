@@ -26,6 +26,11 @@ export class ChatService {
       message: 'Comprei uma passagem para São Francisco no Airbnb, quer viajar comigo?',
       user: 'Ronaldo',
       date: new Date()
+    },
+    {
+      message: 'Vamos demais cara, obrigado pelo convite!',
+      user: 'Andre',
+      date: new Date()
     }
   ]
 
