@@ -21,7 +21,7 @@ export class LoginPage implements OnInit {
 
   public toHome() {
     this.settingsService.setUserName(this.nickName);
-    this.navigateService.goToHome();
+    this.navigateService.goTo('home');
   }
 
 }
