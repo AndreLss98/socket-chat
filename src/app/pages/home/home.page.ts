@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MainNavigateService } from 'src/app/services/navigator/main-navigate.service';
 
 @Component({
@@ -6,14 +6,18 @@ import { MainNavigateService } from 'src/app/services/navigator/main-navigate.se
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
 
   constructor(private navigateService: MainNavigateService) {
 
   }
 
+  ngOnInit() {
+
+  }
+
   public visualizeChat() {
-    this.navigateService.goToChatPage()
+    this.navigateService.goTo('chat');
   }
 
 }
