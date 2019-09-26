@@ -10,11 +10,7 @@ export class MainNavigateService {
 
   }
 
-  public goToHome() {
-    this.route.navigateByUrl('home');
-  }
-
-  public goToChatPage() {
-    this.route.navigateByUrl('chat');
+  public goTo(url: string) {
+    this.route.navigateByUrl(url);
   }
 }
