@@ -8,12 +8,12 @@ import { MainNavigateService } from 'src/app/services/navigator/main-navigate.se
 })
 export class HomePage implements OnInit {
 
-  constructor(private navigateService: MainNavigateService) {
+  constructor( private navigateService: MainNavigateService) {
 
   }
 
   ngOnInit() {
-
+    
   }
 
   public visualizeChat() {
