@@ -1,52 +1,33 @@
 import { Injectable } from '@angular/core';
-import { ChatObject } from 'src/app/models/chat.model';
+
+import { Socket } from 'ngx-socket-io';
+import { GlobalConfgService } from '../settings/global-confg.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ChatService {
 
-  private messages: ChatObject[] = [
-    {
-      message: 'Olá',
-      user: 'Ronaldo',
-      date: new Date()
-    },
-    {
-      message: 'Olá, tudo bem?',
-      user: 'Andre',
-      date: new Date()
-    },
-    {
-      message: 'Tudo ótimo e você?',
-      user: 'Ronaldo',
-      date: new Date()
-    },
-    {
-      message: 'Comprei uma passagem para São Francisco no Airbnb, quer viajar comigo?',
-      user: 'Ronaldo',
-      date: new Date()
-    },
-    {
-      message: 'Vamos demais cara, obrigado pelo convite!',
-      user: 'Andre',
-      date: new Date()
-    }
-  ]
+  public users = [];
 
-  constructor() {
+  constructor(private socket: Socket, private settings: GlobalConfgService) {
 
   }
 
-  public getMessages(): ChatObject[] {
-    return this.messages;
+  public startConnection() {
+    this.socket.connect();
+    this.createListenerUserRegistration();
   }
 
-  public sendMessages(message: ChatObject) {
-    if (this.messages) {
-      this.messages.push(message);
-    } else {
-      this.messages = [message];
-    }
+  public registerUser() {
+    this.socket.emit('set-name', this.settings.getUserName());
+  }
+
+  public createListenerUserRegistration() {
+    this.socket.fromEvent('users-changed').subscribe(data => {
+      if (data['event'] === 'joined' && data['user'] !== this.settings.getUserName()) {
+        this.users.unshift({userName: data['user']});
+      }
+    });
   }
 }

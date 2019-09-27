@@ -1,7 +1,7 @@
 <ion-header>
     <ion-grid id="header">
         <ion-row class="ion-align-items-center ion-justify-content-center">
-            <ion-col (click)="visualizeChat()" pull="2" size="1" class="ion-align-self-start">
+            <ion-col pull="2" size="1" class="ion-align-self-start">
                 <ion-icon name="create"></ion-icon>
             </ion-col>
             <ion-col size="auto" class="ion-align-items-center">
@@ -15,5 +15,5 @@
 </ion-header>
 
 <ion-content>
-
+    <conversation-item *ngFor="let chat of chatServices.users" [name]="chat.userName"></conversation-item>
 </ion-content>
