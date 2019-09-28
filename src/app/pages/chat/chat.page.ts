@@ -28,7 +28,7 @@ export class ChatPage implements OnInit {
   }
 
   public fetchMessages() {
-    this.messages = this.chatService.getMessages();
+    // this.messages = this.chatService.getMessages();
   }
 
   public sendMessage() {
@@ -37,7 +37,7 @@ export class ChatPage implements OnInit {
       user: this.settingsService.getUserName(),
       date: new Date()
     }
-    this.chatService.sendMessages(tempMessage);
+    // this.chatService.sendMessages(tempMessage);
     this.message = '';
     this.scrollContent();
   }
