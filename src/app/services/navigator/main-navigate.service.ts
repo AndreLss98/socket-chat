@@ -10,7 +10,7 @@ export class MainNavigateService {
 
   }
 
-  public goTo(url: string) {
-    this.route.navigateByUrl(url);
+  public goTo(url: string, params?: any) {
+    this.route.navigateByUrl(url, params);
   }
 }
