@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { MainNavigateService } from 'src/app/services/navigator/main-navigate.service';
 
 @Component({
   selector: 'conversation-item',
@@ -11,7 +12,7 @@ export class ConversationItemComponent implements OnInit {
   @Input() lastMessage: string;
   @Input() date;
 
-  constructor() {
+  constructor(private navigator: MainNavigateService) {
 
   }
 
@@ -19,6 +20,8 @@ export class ConversationItemComponent implements OnInit {
 
   }
 
-
+  public enterChat() {
+    this.navigator.goTo('chat');
+  }
 
 }
