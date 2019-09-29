@@ -17,8 +17,9 @@ export class HomePage implements OnInit {
     
   }
 
-  public visualizeChat() {
-    this.navigateService.goTo('chat');
+  public enterChat(userPosition: number) {
+    this.chatServices.setChatUser(userPosition);
+    this.navigateService.goTo('chat/');
   }
 
 }

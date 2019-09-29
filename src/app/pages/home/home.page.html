@@ -15,5 +15,5 @@
 </ion-header>
 
 <ion-content>
-    <conversation-item *ngFor="let chat of chatServices.users" [name]="chat.userName" [lastMessage]="'Olá, tudo bem!'" [date]="'16:00'"></conversation-item>
+    <conversation-item (click)="enterChat(i)" *ngFor="let chat of chatServices.users; let i = index" [name]="chat.userName" [lastMessage]="'Olá, tudo bem!'" [date]="'16:00'"></conversation-item>
 </ion-content>
