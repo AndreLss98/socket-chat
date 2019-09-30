@@ -5,8 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class GlobalConfgService {
 
-  private userName = '';
-
+  private userName: string;
+  private userId: string;
   constructor() {
 
   }
@@ -17,5 +17,13 @@ export class GlobalConfgService {
 
   public setUserName(name: string) {
     this.userName = name;
+  }
+
+  public setUserId(id: string) {
+    this.userId = id;
+  }
+
+  public getUserId(): string {
+    return this.userId;
   }
 }

@@ -17,7 +17,7 @@ export class ConversationItemComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    
   }
 
   public enterChat() {

@@ -1,5 +1,9 @@
-export interface ChatObject {
+interface Message {
     message: string;
-    user: string;
-    date: Date;
+    userName: string;
+}
+export interface PrivateChat {
+    privateChatId: string;
+    chatName: string;
+    messages: Message[];
 }

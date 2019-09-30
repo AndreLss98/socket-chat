@@ -1,10 +1,10 @@
 <ion-content>
   <ion-grid>
-    <ion-row *ngFor="let message of chatServices.messages">
-      <ion-col *ngIf="message.user === currentUser" size="9" offset="3" class="userMessage">
+    <ion-row *ngFor="let message of currentPrivateChat.messages">
+      <ion-col *ngIf="message.userName === currentUser" size="9" offset="3" class="userMessage">
         <ion-label>{{ message.message }}</ion-label>
       </ion-col>
-      <ion-col *ngIf="message.user === currentChatUser.user" size="9" class="otherMessage">
+      <ion-col *ngIf="message.userName === currentPrivateChat.chatName" size="9" class="otherMessage">
         <ion-label>{{ message.message }}</ion-label>
       </ion-col>
     </ion-row>

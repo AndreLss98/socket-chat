@@ -19,7 +19,7 @@ export class HomePage implements OnInit {
 
   public enterChat(userPosition: number) {
     this.chatServices.setChatUser(userPosition);
-    this.navigateService.goTo('chat/');
+    this.navigateService.goTo('chat');
   }
 
 }
