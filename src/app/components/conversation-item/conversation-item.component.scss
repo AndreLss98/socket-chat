@@ -1,0 +1,36 @@
+ion-grid {
+    margin: 5px 0;
+}
+
+ion-icon {
+    font-size: 2.4em;
+}
+
+#name {
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+#lastMessage {
+    font-size: 1em;
+    color: #ccc;
+    font-weight: 400;
+}
+
+#date {
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#redPoint {
+    display: flex;
+    justify-content: flex-end;
+    div {
+        height: 15px;
+        width: 15px;
+        background-color: red;
+        border-radius: 25px;
+    }
+}

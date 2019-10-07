@@ -24,3 +24,35 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+ion-header {
+    background-color: #1F1F1F;
+}
+
+ion-header::after {
+    display: none;
+}
+
+ion-content {
+    --ion-background-color: linear-gradient(#1F1F1F, #030303);
+}
+
+ion-footer {
+    background-color: #030303;
+}
+
+ion-label {
+    --color: white !important;
+}
+
+ion-item {
+    --background: rgba(0, 0, 0, 0);
+    --border-color: white !important;
+    caret-color: #DC281E;
+    color: white;
+}
+
+ion-button {
+    --background: linear-gradient( -45deg, #870000 35%, #190A05);
+}
+

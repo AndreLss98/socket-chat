@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-grid id="header">
+        <ion-row class="ion-align-items-center ion-justify-content-center">
+            <ion-col pull="2" size="1" class="ion-align-self-start">
+                <ion-icon name="create"></ion-icon>
+            </ion-col>
+            <ion-col size="auto" class="ion-align-items-center">
+                <ion-label>1 new message</ion-label>
+            </ion-col>
+            <ion-col push="2" size="1" class="ion-align-items-end">
+                <ion-icon name="search"></ion-icon>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-header>
+
+<ion-content>
+    <conversation-item (click)="enterChat(i)" *ngFor="let chat of chatServices.chat; let i = index" [name]="chat.chatName" [lastMessage]=" chat.messages.length > 0? chat.messages[chat.messages.length - 1].message.substring(0, 10) + '...': '  '" [date]="'16:00'"></conversation-item>
+</ion-content>
